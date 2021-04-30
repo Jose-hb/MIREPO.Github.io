@@ -25,20 +25,215 @@
                 <input type="checkbox">Musica<br>
             </fieldset>
         </form></td>
-    </table><p></p>
+    </table> <br>
     
-    <table  border="7" bgcolor="#9DF046" width="400px">
-        <td>Datos del comprador<p></p>
-        <p><center>Nombre &nbsp;&nbsp;&nbsp;&nbsp; <input type="txt" style="border-color: red;" placeholder="Escribe tu nombre completo"></center>
-        <center>E-mail &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="email" style="border-color: red;" placeholder="ejemplo@um.es"></center>
-        <center>Telefono &nbsp;&nbsp;&nbsp; <input type="text" style="border-color: red;" placeholder="Ej. +34668899999"></center>
-        <center>Pais &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" style="border-color: red;"></center></p>
-        Datos de Tarjeta de Credito<p></p>
-        <center>Numero &nbsp;&nbsp;&nbsp;&nbsp;<input type="number" style="border-color: red;" placeholder="Ej. 5555-4444-3333-2222"></center>
-        <center>Nombre &nbsp;&nbsp;&nbsp;&nbsp; <input type="text" style="border-color: red;" placeholder="Nombre que figura en la tarjeta"></center><p></p>
-        <p>-------------------------------------</p>
-        <input type="submit" value="Confirmar pedido">
+
+    <style type="text/css">
+        form#pago {
+        margin:auto;
+        background: Green;
+        color: white;
+        font-size: 12px;
+        padding: 30px;
+        width: 350px;
+        border:solid 10px LightSteelBlue;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        }
+        
+        form#pago fieldset {
+        border: none;
+        }
+        
+        form#pago input{
+        font-size:12px;
+        border:solid 1px Green;
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        float: right;
+        margin-right: 15px;
+        width: 200px;
+        }
+        
+        form#pago ol li {
+        line-height: 25px;
+        list-style: none;
+        }
+        
+        form#pago [required]{
+        border:solid 1px red;
+        }
+        
+    </style>
+        
+        <form id="pago">
+        <fieldset>
+        <legend>Datos del comprador</legend>
+        <ol>
+        <li>
+        <label for="nombre">Nombre</label>
+        <input id="nombre" name="nombre" type="text" placeholder="Escribe tu nombre completo" required autofocus>
+        </li>
+        <li>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="ejemplo@um.es" required>
+        </li>
+        <li>
+        <label for="telefono">Teléfono</label>
+        <input id="telefono" name="telefono" type="tel" placeholder="Ej. +34668899999" required>
+        </li>
+        <li>
+        <label for="pais">País</label>
+        <input id="pais" name="pais" type="text" required>
+        </li>
+        </ol>
+        </fieldset>
+        <fieldset>
+        <legend>Datos de tarjeta de crédito o débito</legend>
+        <ol>
+        <li>
+        <label for="numtarjeta">Número</label>
+        <input id="numtarjeta" name="numtarjeta" type="number" placeholder="Ej. 5555-4444-3333-2222" required>
+        </li>
+        <li>
+        <label for="nomtarjeta">Nombre</label>
+        <input id="nomtarjeta" name="nomtarjeta" type="text" placeholder="Nombre que figura en la tarjeta" required>
+        </li>
+        </ol>
+        </fieldset>
+        -------------------------------------------------
+        <fieldset>
+        <button type="submit">Confirmar pedido</button>
+        </fieldset>
+        </form> <br>
+    
+    <form>
+    <table black>
+         <td  bgcolor="9effad" colspan="2" height="50">
+          <center>Registro de trabajadores </center>
+         </td>
+        <tr >
+    <td>Rut:</td> <td><input type="text" required placeholder="sin puntos ni guion" ></td>
+    </tr>
+    <tr>
+    <td>Nombre:</td>              <td><input type="text" ></td>    
+    </tr>
+    <tr>
+    <td>Apellido Paterno:</td>    <td><input type="text" ></td> 
+    </tr>
+    <tr>
+        <td>Apellido Materna:</td>    <td><input type="text" ></td> 
+    </tr>
+    <tr>    
+    <td>Sexo:</td>                <td><input type="radio" name="sex" value="m" >Masculino <input type="radio" name="sex" value="f">Femenino</td> 
+    </tr>
+    <tr>    
+    <td>Nivel de estudio:</td>              
+        <td>  
+            <input type="checkbox">No tiene<br>
+            <input type="checkbox">Técnico<br>
+            <input type="checkbox">Universitario<br>
+        </td> 
+    </tr>
+    <tr>  
+    <td>Ciudad de nacimiento</td> 
+    <td>
+    <select>
+    <option>Rancagua osea elige</option>
+    <option>pozole</option>
+    <option>Suma caridad</option>
+    <option>nueva alenjandria</option>
+    </select>
+    </td> 
+    </tr>
+    <tr>
+        
+    <td>Curriculum</td>           <td><input type="file" name="examinar"></td>
+    </tr>
+      <tr>  
+    <td>Foto</td>                 <td><input type="file" name="examinar"></td>
+    </tr alling="center">
+        <td  bgcolor="9effad" colspan="2" height="40" >
+           <center><button>Registrar trabajador</button></center>
         </td>
-    </table>
+     </table>
+   </form> <br>
+
+
+    <form>
+        <table  width=600>
+            <h1>Formulario de alta</h1>
+            <tr width=300>
+                <td width=400><h3>Nombres y apellidos<samp style="color:red">*</samp></h3></td><td ><h3>Dirección<samp style="color:red">*</samp></h3></td>
+            </tr>
+            <tr width=400>
+                <td width=300><input type="text"  required ></td><td width=300><input type="text" required ></in></td>
+            </tr>
+            <tr>
+                <td width=300><sup>Nombre</sup>  </td> <td width=300><sup>Calle,número,piso,puerta</sup>  </td>
+            </tr>
+            <tr>
+                <td > <input type="text" required> </td>
+                 <td rowspan="4"> 
+                <table>
+                    
+                    <tr>
+                        <td><input type="text" required></td>
+                        <td><input type="text" required></td>
+                    </tr>
+                    <tr>
+                        <td><sup>Código postal</sup></td>
+                        <td><sup>Municipio</sup></td>
+                    </tr>
+                    <tr>
+                        <td><select name="select" required>
+                            <option>&nbsp;</option> 
+                           <option>La Libertad</option>
+                            <option>Umm al-Caiwain y Fuyaira</option></select>
+                        </td>                    
+                        <td><select name="select" required >
+                         <option>&nbsp;</option> 
+                        <option>Perú</option>
+                         <option>Emiratos Árabes Unidos</option></select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><sup>provincia</sup></td>
+                        <td><sup>pais</sup></td>
+                    </tr>
+                </table>
+                </td>
+            </tr>        
+            <tr>
+                <td><sup>Primer  apellido</sup>  </td> 
+            </tr>        
+            <tr>
+                <td> <input type="text" required> </td> 
+            </tr>        
+            <tr>
+                <td> <sup>Segundo apellido</sup> </td> 
+            </tr>       
+             <tr>
+                <td> <h3>Email</h3> </td>  <td> <h3>Telefono<samp style="color: red;">*</samp></h3> </td>
+            </tr>        
+            <tr>
+                <td><input type="email">  </td>
+                                          <td><table rowspan=" 2" >
+                                            <tr><td>
+                                                <input type="tel" required></td><td><input type="tel" required>
+                                            </td></tr>
+                                            <tr>
+                                                <td><sup>Fijo</sup></td><td><sup>Movil</sup></td>
+                                            </tr>
+                                           </table> </td></tr>
+            <tr>
+                <td>  </td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button > Darme de alta--></button></td> 
+            </tr>        
+    
+        </table>
+    </form>
+   
 </body>
 </html>
